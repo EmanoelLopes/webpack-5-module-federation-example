@@ -1,0 +1,21 @@
+{
+  "name": "mf-dashboard",
+  "version": "1.0.0",
+  "description": "example of multiple builds and modules to join in a single application",
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run --parallel start",
+    "build": "lerna run build",
+    "clean": "lerna clean",
+    "diff": "npx lerna diff",
+    "version": "lerna version"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": ["packages/*"]
+  }
+}
