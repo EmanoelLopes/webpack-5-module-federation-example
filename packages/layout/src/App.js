@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import { GlobalStyle } from '@libray/GlobalStyle';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
+import { GlobalStyle } from './GlobalStyle';
 
 function App() {
   return (

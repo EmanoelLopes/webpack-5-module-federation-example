@@ -10,12 +10,7 @@
     "serve": "serve dist -p 9001"
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "styled-components": "^5.3.0",
-    "styled-reset": "^4.3.4"
+    "@dashboard/library": "1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",

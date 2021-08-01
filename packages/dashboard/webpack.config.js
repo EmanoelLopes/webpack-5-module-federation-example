@@ -58,11 +58,13 @@ module.exports = {
           requiredVersion: '^17.0.2',
         },
         'react-dom': {
-          singleton: true
+          singleton: true,
+          requiredVersion: '^17.0.2',
         },
-        'react-router-dom': {
-          singleton: true
-        },
+        'styled-components': {
+          singleton: true,
+          requiredVersion: '^5.3.0',
+        }
       },
     }),
     new ExternalTemplateRemotesPlugin(),

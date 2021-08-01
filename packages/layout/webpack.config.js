@@ -61,10 +61,12 @@ module.exports = {
           requiredVersion: '^17.0.2',
         },
         'react-dom': {
-          singleton: true
+          singleton: true,
+          requiredVersion: '^17.0.2',
         },
         'styled-components': {
-          singleton: true
+          singleton: true,
+          requiredVersion: '^5.3.0',
         }
       },
     }),
