@@ -6,7 +6,7 @@ export function App() {
     <Fragment>
       <GlobalStyle />
       <div>
-        <h1>App 4 - Main Content</h1>
+        <h1>App 4</h1>
       </div>
     </Fragment>
   );
