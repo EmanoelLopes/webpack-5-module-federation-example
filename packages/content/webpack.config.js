@@ -1,8 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {
-  ModuleFederationPlugin
-} = require('webpack').container;
-const ExternalTemplateRemotesPlugin = require('external-remotes-plugin');
+const { ModuleFederationPlugin } = require('webpack').container;
 const path = require('path');
 
 module.exports = {
@@ -10,7 +7,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 3000,
+    port: 3003,
   },
   output: {
     publicPath: 'auto',
@@ -46,26 +43,21 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'dashboard',
-      remotes: {
-        '@layout': 'layout@http://localhost:3001/remoteEntry.js',
-        '@library': 'library@http://localhost:3002/remoteEntry.js',
-        '@content': 'content@http://localhost:3003/remoteEntry.js',
+      name: 'content',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './App': './src/App',
       },
       shared: {
         react: {
           singleton: true,
-          requiredVersion: '^17.0.2',
+          requiredVersion: '^17.0.2'
         },
         'react-dom': {
           singleton: true
-        },
-        'react-router-dom': {
-          singleton: true
-        },
+        }
       },
     }),
-    new ExternalTemplateRemotesPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),

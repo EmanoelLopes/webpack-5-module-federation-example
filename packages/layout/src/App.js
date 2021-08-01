@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { GlobalStyle } from './GlobalStyle';
+import { GlobalStyle } from '@libray/GlobalStyle';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 
