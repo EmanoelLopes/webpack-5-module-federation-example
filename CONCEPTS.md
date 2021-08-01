@@ -3,6 +3,9 @@
 ## Microfrontends
 Martin Fowler defined the Micro-Frontend architecture as "an architectural style where independently deliverable frontend applications are composed into a greater whole". Simply, a Micro-Frontend is a portion of a webpage (not the entire page). In the Micro-Frontend Architecture, there is a "Host" or a "Container"page that can host one or more Micro-Frontends. The Host/Container page can also share some of its own Micro-Frontend components.
 
+## Monorepo
+A monorepo (mono repository) is a single repository that stores all of code and assets for many project.
+
 ## Webpack
 webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
 
@@ -31,6 +34,22 @@ module:
 bi-directional host:
 
     A webpack build that is both a host consuming remotes and a remote being consumed by other hosts.
+
+
+## Project
+Dashboard
+
+## Packages
+
+* App 1 - Dashboard
+    Is the main App and Host of all remotes;
+* App 2 - Layout
+    Containing components like Sidebar and Header. It is bi-directional being host and remote at the same time;
+* App 3 - Library
+    Components lib like Buttons, Avatar, Inputs - Only remote
+* App 4 - Content.
+    Is only remote like library as well.
+
 
 
 ## GOOD READS:
