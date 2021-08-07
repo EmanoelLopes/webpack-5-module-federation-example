@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { GlobalStyle, Container } from './GlobalStyle';
 import { Home, PageTwo, PageThree } from './pages';
 import Sidebar from '@layout/Sidebar';
