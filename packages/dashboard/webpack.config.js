@@ -50,7 +50,7 @@ module.exports = {
       remotes: {
         '@layout': 'layout@http://localhost:3001/remoteEntry.js',
         '@library': 'library@http://localhost:3002/remoteEntry.js',
-        '@content': 'content@http://localhost:3003/remoteEntry.js',
+        '@routes': 'routes@http://localhost:3003/remoteEntry.js',
       },
       shared: {
         react: {
