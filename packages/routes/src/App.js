@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { GlobalStyle, Container } from './GlobalStyle';
-import { Home, PageTwo, PageThree } from './pages';
 import Sidebar from '@layout/Sidebar';
 import {
   BrowserRouter as Router,
@@ -8,6 +7,10 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+
+const Home = lazy(() => import('./pages/Home'));
+const PageTwo = lazy(() => import('./pages/PageTwo'));
+const PageThree = lazy(() => import('./pages/PageThree'));
 
 export default function App() {
   return (
@@ -21,10 +24,10 @@ export default function App() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/page-two">Page Two</Link>
               </li>
               <li>
-                <Link to="/users">Users</Link>
+                <Link to="/page-three">Page Three</Link>
               </li>
             </ul>
           </nav>
@@ -33,14 +36,20 @@ export default function App() {
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/about">
-              <PageThree />
+            <Route path="/page-three">
+              <Suspense fallback={<div>Loading...</div>}>
+                <PageThree />
+              </Suspense>
             </Route>
-            <Route path="/users">
-              <PageTwo />
+            <Route path="/page-two">
+              <Suspense fallback={<div>Loading...</div>}>
+                <PageTwo />
+              </Suspense>
             </Route>
             <Route path="/">
-              <Home />
+              <Suspense fallback={<div>Loading...</div>}>
+                <Home />
+              </Suspense>
             </Route>
           </Switch>
         </div>

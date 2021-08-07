@@ -46,7 +46,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'dashboard',
+      name: 'root',
       remotes: {
         '@layout': 'layout@http://localhost:3001/remoteEntry.js',
         '@library': 'library@http://localhost:3002/remoteEntry.js',
